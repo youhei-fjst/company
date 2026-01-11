@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  background: #f0f0f0;
+}
+
+/* ヘッダー */
+
+header {
+  height: 80px;
+  margin: 0 16px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.pclogo {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  gap: 16px;
+  margin: 0 auto 0 0;
+}
+
+.otoiawase {
+  display: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: unset;
+  font-size: 14px;
+  margin: 0 24px 0 0;
+}
+
+/* メイン */
+
+.top {
+  margin: 0 0 64px;
+  vertical-align: bottom;
+}
+
+.top img {
+  width: 100%;
+  object-fit: cover;
+  height: 700px;
+}
+
+/* 共通の見出し */
+
+h2 {
+  font-size: 40px;
+  font-weight: normal;
+  margin: 8px 0;
+  padding: 0;
+  letter-spacing: 10px;
+}
+
+.nihongo {
+  margin: 0 0 32px;
+}
+
+/* ニュース */
+
+time {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+span {
+  margin: 0 16px;
+  padding: 2px 8px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.news {
+  max-width: 1000px;
+  width: calc(100% - 32px);
+  margin: 64px auto;
+  padding: 0;
+}
+
+.news ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* アバウト */
+
+.about {
+  margin: 0;
+}
+
+.about img {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+
+.aboutkiji {
+  margin: 8px 16px;
+}
+
+.pabout {
+  margin: 0;
+  max-width: 680px;
+  line-height: 2;
+}
+
+/* ビジネス */
+
+.business {
+  max-width: 1000px;
+  width: calc(100% - 32px);
+  margin: 64px auto;
+  padding: 0;
+}
+
+.business h3::before {
+  content: " - ";
+}
+
+.business ul {
+  list-style: none;
+  margin: 0 32px 0 0;
+  padding: 0;
+}
+
+.imgbusiness {
+  margin: 0;
+  text-align: center;
+}
+
+.business img {
+  max-width: 760px;
+  width: 100%;
+  height: auto;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+/* カンパニー */
+
+.company {
+  margin: 16px;
+}
+
+.gaiyou {
+  background: #fff;
+  margin: 0 0 16px;
+  padding: 16px;
+}
+
+dl {
+  font-size: 14px;
+}
+
+dd {
+  margin: 8px 0 16px 16px;
+}
+
+.company img {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+
+/* フッター */
+
+footer {
+  background: #fff;
+  padding: 32px 16px 16px;
+}
+
+.foot{
+  max-width: calc(1000px - 32px);
+  margin: 0 auto;
+}
+
+footer dl {
+  font-size: 14px;
+}
+
+footer ul {
+  list-style: none;
+  font-size: 14px;
+  padding: 0;
+  margin: 8px 0 32px;
+}
+
+small {
+  font-size: 10px;
+}
+
+/* 900px以上のクエリー */
+
+@media(width>=900px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 16px;
+  }
+
+  .splogo {
+    display: none;
+  }
+
+  .pclogo {
+    display: inline-block;
+    margin: 0 64px 0 0;
+  }
+
+  .otoiawase {
+    display: inline-block;
+    margin: 0 0 0 auto;
+    background: #000;
+    width: 160px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+  }
+
+  .otoiawase a {
+    all: unset;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  /* ニュース */
+
+  .news ul {
+    display: flex;
+    gap: 64px;
+  }
+
+  .news li+li {
+    padding: 0 0 0 16px;
+    border-left: 1px solid #000;
+  }
+
+  /* アバウト */
+
+  .about {
+    display: flex;
+  }
+
+  .about img {
+    height: 400px;
+  }
+
+  .aboutkiji {
+    margin: 100px 40px 32px;
+  }
+
+  /* ビジネス */
+
+  .business ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-height: 800px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: calc(100% - 160px);
+  }
+
+  .business li:first-of-type {
+    margin: 64px 0 0;
+  }
+
+  .business li:last-of-type {
+    margin: 0 0 64px;
+  }
+
+  .business li {
+    width: calc((100% - 64px - 40px) / 2);
+  }
+
+  .business img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* カンパニー */
+
+  .company {
+    display: flex;
+    align-items: center;
+    vertical-align: bottom;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  .gaiyou {
+    /* flex: 1; */
+    width: 400px;
+    padding: 64px 40px;
+  }
+
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 400px;
+  }
+
+  dt {
+    margin: 8px 0 0;
+    width: 80px;
+  }
+
+  dd {
+    margin: 8px 0 0 auto;
+    width: 320px;
+  }
+
+  .imgcompany {
+    flex: 1;
+    width: 55%;
+  }
+
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
